@@ -1,15 +1,12 @@
 import { Text, View } from "react-native";
+import { Section } from "@/components/Section";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View>
+      <Section />
+      <Section />
+      <Section />
     </View>
   );
 }

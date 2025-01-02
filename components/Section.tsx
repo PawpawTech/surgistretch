@@ -1,19 +1,14 @@
 import { View, Text } from "react-native";
 
-export function Section() {
+export function Section({ title, subheading, cards }) {
   return (
     <View>
-      <Text>Section Name</Text>
+      <Text>{title}</Text>
       {/* Card Component For Loops */}
       <View style={{ flexDirection: "row", flexWrap: "wrap"}}>
-        <Text>Stretch Video</Text>
-        <Text>Stretch Video</Text>
-        <Text>Stretch Video</Text>
-        <Text>Stretch Video</Text>
-        <Text>Stretch Video</Text>
-        <Text>Stretch Video</Text>
-        <Text>Stretch Video</Text>
-        <Text>Stretch Video</Text>
+        {cards.map(card =>
+          <Text>{card.title}</Text>
+        )}
       </View>
     </View>
   )

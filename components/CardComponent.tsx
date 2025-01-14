@@ -14,8 +14,8 @@ export default function CardComponent(props) {
 
 const styles = StyleSheet.create({
     card: {
-        width: 250,
-        height: 250,
+        width: 100,
+        height: 100,
         boxShadow: "10px 10px 17px -12px rgba(0,0,0,0.75)",
         boarderRadius: 6,
         elevation: 3,

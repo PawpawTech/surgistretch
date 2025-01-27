@@ -1,5 +1,6 @@
 import { Text, ScrollView } from "react-native";
 import { Section } from "@/components/Section";
+import { exerciseData } from "@/constants/Data";
 import { faUserDoctor } from '@fortawesome/free-solid-svg-icons/faUserDoctor'
 import { faHandHoldingMedical } from '@fortawesome/free-solid-svg-icons/faHandHoldingMedical'
 import { faHouseChimneyMedical } from '@fortawesome/free-solid-svg-icons/faHouseChimneyMedical'
@@ -60,7 +61,7 @@ const mockData = [
 export default function Index() {
   return (
     <ScrollView>
-      {mockData.map((data, index) =>
+      {exerciseData.map((data, index) =>
         <Section
           key={index}
           title={data.title}

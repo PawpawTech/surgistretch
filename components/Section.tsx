@@ -23,12 +23,14 @@ export function Section({ title, subheading, icon, cards }) {
         </View>
       </View>
       {/* Card Component For Loops */}
-      <View style={{ flexDirection: "row", flexWrap: "wrap"}}>
+      <View style={{ flexDirection: "row", flexWrap: "wrap", maxWidth: 400 }}>
         {cards.map((card, index) =>
           <View key={index}>
             <CardComponent key={index}>
             </CardComponent>
-            <Text>{card.title}</Text>
+            <View style={{ flex: 1, width: 100 }}>
+              <Text>{card.title}</Text>
+            </View>
           </View>
         )}
       </View>

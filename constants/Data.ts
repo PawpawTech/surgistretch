@@ -7,6 +7,7 @@ export const exerciseData = [
     "id": 1,
     "title": "Intraoperative",
     "subheading": "micro-breaks during surgery",
+    "category": "Intraoperative Exercise",
     "icon": faUserDoctor,
     "cards": [
       {
@@ -38,8 +39,9 @@ export const exerciseData = [
   },
   {
     "id": 2,
-    "title": "Intra-surgery",
+    "title": "In-between Surgery",
     "subheading": "stretches between surgeries",
+    "category": "In-between Surgery Exercise",
     "icon": faHandHoldingMedical,
     "cards": [
       {
@@ -72,7 +74,8 @@ export const exerciseData = [
   {
     "id": 3,
     "title": "At Home",
-    "subheading": "indepth stretching exercises",
+    "subheading": "in-depth stretching exercises",
+    "category": "At Home Exercise",
     "icon": faHouseChimneyMedical,
     "cards": [
       {

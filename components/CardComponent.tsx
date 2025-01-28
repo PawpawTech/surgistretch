@@ -5,7 +5,7 @@ import { Link } from 'expo-router';
 export default function CardComponent(props) {
     return(
         <View style={styles.card}>
-          <Link href="/video" asChild>
+          <Link href={{ pathname: "/video", params: props.data }} asChild>
             <Pressable>
               <Text style={styles.text}>This is a card </Text>
               <View style={StyleSheet.cardComponent}>

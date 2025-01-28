@@ -10,7 +10,7 @@ import {
   paletteTealLight
 } from '@/constants/Colors'
 
-export function Section({ title, subheading, icon, cards }) {
+export function Section({ title, subheading, icon, cards, category }) {
   return (
     <View style={styles.section}>
       <View style={{ flexDirection: "row" }}>
@@ -25,8 +25,8 @@ export function Section({ title, subheading, icon, cards }) {
       {/* Card Component For Loops */}
       <View style={{ flexDirection: "row", flexWrap: "wrap", maxWidth: 400 }}>
         {cards.map((card, index) =>
-          <View key={index}>
-            <CardComponent key={index}>
+          <View style={{ width: "50%", alignItems: "center" }} key={index}>
+            <CardComponent key={index} data={{...card, category}}>
             </CardComponent>
             <View style={{ flex: 1, width: 100 }}>
               <Text>{card.title}</Text>
@@ -41,8 +41,8 @@ export function Section({ title, subheading, icon, cards }) {
 const styles = StyleSheet.create({
   section: {
     paddingBottom: 20,
-    paddingLeft: 10,
-    paddingRight: 10,
+    paddingLeft: 20,
+    paddingRight: 20,
     paddingTop: 10,
     width: '100%',
     justifyContent: 'center'

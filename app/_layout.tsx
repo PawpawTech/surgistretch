@@ -12,6 +12,7 @@ export default function RootLayout() {
         headerStyle: { backgroundColor: paletteTealDark },
         headerTitleStyle: { color: paletteWhite, fontSize: 26 }
       }} />
+      <Stack.Screen name="video" options={{ headerShown: false }} />
     </Stack>
   );
 }

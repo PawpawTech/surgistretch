@@ -39,8 +39,8 @@ export const exerciseData = [
   },
   {
     "id": 2,
-    "title": "In-between Surgery",
-    "subheading": "stretches between surgeries",
+    "title": "In-between Surgeries",
+    "subheading": "stretches between operations",
     "category": "In-between Surgery Exercise",
     "icon": faHandHoldingMedical,
     "cards": [

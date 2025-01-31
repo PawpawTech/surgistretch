@@ -1,6 +1,7 @@
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Pressable } from "react-native";
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faUserDoctor } from '@fortawesome/free-solid-svg-icons/faUserDoctor'
+import { Link } from 'expo-router';
 
 import CardComponent from '@/components/CardComponent'
 import {
@@ -15,7 +16,7 @@ export function Section({ title, subheading, icon, cards, category }) {
     <View style={styles.section}>
       <View style={{ flexDirection: "row" }}>
         <View style={styles.icon}>
-          <FontAwesomeIcon icon={icon} size={32} style={{color: paletteTealDarkContrast }} />
+          <FontAwesomeIcon icon={icon} size={42} style={{color: paletteTealDarkContrast }} />
         </View>
         <View>
           <Text style={styles.header}>{title}</Text>
@@ -28,8 +29,12 @@ export function Section({ title, subheading, icon, cards, category }) {
           <View style={{ width: "50%", alignItems: "center" }} key={index}>
             <CardComponent key={index} data={{...card, category}}>
             </CardComponent>
-            <View style={{ flex: 1, width: 100 }}>
-              <Text>{card.title}</Text>
+            <View style={{ flex: 1, width: 158 }}>
+              <Link href={{ pathname: "/video", params: {...card, category} }} asChild>
+                <Pressable>
+                  <Text style={styles.cardTitle}>{card.title}</Text>
+                </Pressable>
+              </Link>
             </View>
           </View>
         )}
@@ -52,13 +57,18 @@ const styles = StyleSheet.create({
     paddingRight: 5
   },
   header: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
     color: paletteBlack
   },
   subheader: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: 'bold',
     color: paletteTealDark
+  },
+  cardTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: paletteBlack
   }
 })

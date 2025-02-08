@@ -14,7 +14,7 @@ export default function Index() {
 
   return (
     <View>
-      <VideoScreen />
+      <VideoScreen title={params.title} />
       <View style={styles.contentContainer}>
         <Text style={styles.title}>{params.title}</Text>
         <Text style={styles.category}>{params.category}</Text>
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
 //     flex: 1,
     padding: 10,
     paddingHorizontal: 25,
+    paddingTop: 25
   },
   title: {
     fontSize: 25,
@@ -36,12 +37,12 @@ const styles = StyleSheet.create({
     color: paletteBlack
   },
   category: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: 'bold',
     color: paletteTealDark
   },
   description: {
-    fontSize: 14,
+    fontSize: 16,
     paddingTop: 20
   },
   video: {

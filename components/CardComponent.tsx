@@ -7,9 +7,8 @@ export default function CardComponent(props) {
         <View style={styles.card}>
           <Link href={{ pathname: "/video", params: props.data }} asChild>
             <Pressable>
-              <Text style={styles.text}>This is a card </Text>
               <View style={StyleSheet.cardComponent}>
-              { props.children }
+                { props.children }
               </View>
             </Pressable>
           </Link>

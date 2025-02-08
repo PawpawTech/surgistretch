@@ -10,11 +10,9 @@ import {
 
 export default function Index() {
   const params = useLocalSearchParams();
-  console.log(params)
-
   return (
     <View>
-      <VideoScreen title={params.title} />
+      <VideoScreen style={styles.screen} title={params.title} />
       <View style={styles.contentContainer}>
         <Text style={styles.title}>{params.title}</Text>
         <Text style={styles.category}>{params.category}</Text>
@@ -25,8 +23,10 @@ export default function Index() {
 }
 
 const styles = StyleSheet.create({
+  screen: {
+    width: '100%'
+  },
   contentContainer: {
-//     flex: 1,
     padding: 10,
     paddingHorizontal: 25,
     paddingTop: 25

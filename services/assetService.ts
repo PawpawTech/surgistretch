@@ -9,7 +9,7 @@ import {
   HEEL_LIFTS,
   HINGE,
   HIP_FLEXOR_STRETCH,
-  KEELING_CHOPS,
+  KNEELING_CHOPS,
   LATERAL_PLANK_WITH_CLAMS,
   MEDICINE_BALL_SQUAT,
   PIRIFORMIS_STRETCH,
@@ -33,95 +33,241 @@ import {
 const getDefautltMP4 = () => require('../assets/videos/OR_Chin_Tucks.mp4');
 
 export const getVideoMP4 = ( title ) => {
-  console.log("SEARCH FOR", title)
   if (typeof title !== "string") {
     return getDefautltMP4();
   }
   if (title === ANTIROTATION_PRESS) {
-    return require('../assets/videos/Antirotation_Press.mp4')
+    return require('../assets/videos/Antirotation_Press.mp4');
   }
   if (title === CHAIR_CAT_COW) {
-    return require('../assets/videos/Chair_Cat_Cow.mp4')
+    return require('../assets/videos/Chair_Cat_Cow.mp4');
   }
   if (title === CHIN_TUCKS) {
-    return require('../assets/videos/OR_Chin_Tucks.mp4')
+    return require('../assets/videos/OR_Chin_Tucks.mp4');
   }
   if (title === DOORWAY_ARM_STRETCHES) {
-    return require('../assets/videos/Doorway_Arm_Stretches.mp4')
+    return require('../assets/videos/Doorway_Arm_Stretches.mp4');
   }
   if (title === ELASTIC_BAND_BRIDGE) {
-    return require('../assets/videos/Elastic_Band_Bridge.mp4')
+    return require('../assets/videos/Elastic_Band_Bridge.mp4');
   }
   if (title === ELASTIC_BAND_CHOPS) {
-    return require('../assets/videos/Elastic_Band_Chops.mp4')
+    return require('../assets/videos/Elastic_Band_Chops.mp4');
   }
   if (title === FABER_STRETCH) {
-    return require('../assets/videos/Faber_Stretch.mp4')
+    return require('../assets/videos/Faber_Stretch.mp4');
   }
   if (title === HEEL_LIFTS) {
-    return require('../assets/videos/Heel_Lifts.mp4')
+    return require('../assets/videos/Heel_Lifts.mp4');
   }
   if (title === HINGE) {
-    return require('../assets/videos/OR_Hinge.mp4')
+    return require('../assets/videos/OR_Hinge.mp4');
   }
   if (title === HIP_FLEXOR_STRETCH) {
-    return require('../assets/videos/Hip_Flexor_Stretch.mp4')
+    return require('../assets/videos/Hip_Flexor_Stretch.mp4');
   }
-  if (title === KEELING_CHOPS) {
-    return require('../assets/videos/Kneeling_Chops.mp4')
+  if (title === KNEELING_CHOPS) {
+    return require('../assets/videos/Kneeling_Chops.mp4');
   }
   if (title === LATERAL_PLANK_WITH_CLAMS) {
-    return require('../assets/videos/Lateral_Plank_With_Clams.mp4')
+    return require('../assets/videos/Lateral_Plank_With_Clams.mp4');
   }
   if (title === MEDICINE_BALL_SQUAT) {
-    return require('../assets/videos/Medicine_Ball_Chop_Squat.mp4')
+    return require('../assets/videos/Medicine_Ball_Chop_Squat.mp4');
   }
   if (title === PIRIFORMIS_STRETCH) {
-    return require('../assets/videos/Piriformis_Stretch.mp4')
+    return require('../assets/videos/Piriformis_Stretch.mp4');
   }
   if (title === PRONE_TS) {
-    return require('../assets/videos/Prone_Ts.mp4')
+    return require('../assets/videos/Prone_Ts.mp4');
   }
   if (title === QUADRUPED_THORACIC_ROTATION) {
-    return require('../assets/videos/Quadriped_Thoracic_Rotation.mp4')
+    return require('../assets/videos/Quadriped_Thoracic_Rotation.mp4');
   }
   if (title === SCAPULAR_RETRACTION) {
-    return require('../assets/videos/OR_Scapular_Retraction.mp4')
+    return require('../assets/videos/OR_Scapular_Retraction.mp4');
   }
   if (title === SCAPULAR_RETRACTION_AS) {
-    return require('../assets/videos/Scapular Retractions As.mp4')
+    return require('../assets/videos/Scapular Retractions As.mp4');
   }
   if (title === SEATED_PRETZEL) {
-    return require('../assets/videos/Seated_Bretzel.mp4')
+    return require('../assets/videos/Seated_Bretzel.mp4');
   }
   if (title === SHOULDER_BLADE_RETRACTIONS) {
-    return require('../assets/videos/Shoulder_Blade_Retractions.mp4')
+    return require('../assets/videos/Shoulder_Blade_Retractions.mp4');
   }
   if (title === SIDE_LAYING_TRUNK_ROTATION) {
-    return require('../assets/videos/Sidelaying_Trunk_Rotation.mp4')
+    return require('../assets/videos/Sidelaying_Trunk_Rotation.mp4');
   }
   if (title === SINGLE_LEG_DEADLIFTS) {
-    return require('../assets/videos/Single_Leg_Deadlift.mp4')
+    return require('../assets/videos/Single_Leg_Deadlift.mp4');
   }
   if (title === SQUAT_WITH_HIP_HINGE) {
-    return require('../assets/videos/Squat_With_Hip_Hinge.mp4')
+    return require('../assets/videos/Squat_With_Hip_Hinge.mp4');
   }
   if (title === SQUATS) {
-    return require('../assets/videos/OR_Squats.mp4')
+    return require('../assets/videos/OR_Squats.mp4');
   }
   if (title === STANDING_DEADLIFTS) {
-    return require('../assets/videos/OR_Standing_Deadlifts.mp4')
+    return require('../assets/videos/OR_Standing_Deadlifts.mp4');
   }
   if (title === STANDING_LAT_PULL) {
-    return require('../assets/videos/Standing_Lat_Pull.mp4')
+    return require('../assets/videos/Standing_Lat_Pull.mp4');
   }
   if (title === STANDING_TRUNK_ROTATION) {
-    return require('../assets/videos/Standing Trunk Rotation.mp4')
+    return require('../assets/videos/Standing Trunk Rotation.mp4');
   }
   if (title === SUPINE_PELVIC_TILT) {
-    return require('../assets/videos/Supine_Pelvic_Tilt.mp4')
+    return require('../assets/videos/Supine_Pelvic_Tilt.mp4');
   }
   if (title === TRUNK_EXTENSION) {
-    return require('../assets/videos/Trunk_Extension.mp4')
+    return require('../assets/videos/Trunk_Extension.mp4');
+  }
+}
+
+export const getDefaultThumbnail = () => require('../assets/thumbnails/OR_Squats.png');
+
+export const getThumbnail = ( title ) => {
+  if (typeof title !== "string") {
+    return getDefaultThumbnail();
+  }
+  if (title === ANTIROTATION_PRESS) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Antirotation_Press.png');
+  }
+  if (title === CHAIR_CAT_COW) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Chair_Cat_Cow.png');
+  }
+  if (title === CHIN_TUCKS) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/OR_Chin_Tucks.png');
+  }
+  if (title === DOORWAY_ARM_STRETCHES) {
+    return require('../assets/thumbnails/Doorway_Arm_Stretches.png');
+  }
+  if (title === ELASTIC_BAND_BRIDGE) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Elastic_Band_Bridge.png');
+  }
+  if (title === ELASTIC_BAND_CHOPS) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Elastic_Band_Chops.png');
+  }
+  if (title === FABER_STRETCH) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Faber_Stretch.png');
+  }
+  if (title === HEEL_LIFTS) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Heel_Lifts.png');
+  }
+  if (title === HINGE) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/OR_Hinge.png');
+  }
+  if (title === HIP_FLEXOR_STRETCH) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Hip_Flexor_Stretch.png');
+  }
+  if (title === KNEELING_CHOPS) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Kneeling_Chops.png');
+  }
+  if (title === LATERAL_PLANK_WITH_CLAMS) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Lateral_Plank_With_Clams.png');
+  }
+  if (title === MEDICINE_BALL_SQUAT) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Medicine_Ball_Chop_Squat.png');
+  }
+  if (title === PIRIFORMIS_STRETCH) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Piriformis_Stretch.png');
+  }
+  if (title === PRONE_TS) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Prone_Ts.png');
+  }
+  if (title === QUADRUPED_THORACIC_ROTATION) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Quadriped_Thoracic_Rotation.png');
+  }
+  if (title === SCAPULAR_RETRACTION) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/OR_Scapular_Retraction.png');
+  }
+  if (title === SCAPULAR_RETRACTION_AS) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Scapular Retractions As.png');
+  }
+  if (title === SEATED_PRETZEL) {
+    return require('../assets/thumbnails/Seated_Bretzel.png');
+  }
+  if (title === SHOULDER_BLADE_RETRACTIONS) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Shoulder_Blade_Retractions.png');
+  }
+  if (title === SIDE_LAYING_TRUNK_ROTATION) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Sidelaying_Trunk_Rotation.png');
+  }
+  if (title === SINGLE_LEG_DEADLIFTS) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Single_Leg_Deadlift.png');
+  }
+  if (title === SQUAT_WITH_HIP_HINGE) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Squat_With_Hip_Hinge.png');
+  }
+  if (title === SQUATS) {
+    return require('../assets/thumbnails/OR_Squats.png');
+  }
+  if (title === STANDING_DEADLIFTS) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/OR_Standing_Deadlifts.png');
+  }
+  if (title === STANDING_LAT_PULL) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Standing_Lat_Pull.png');
+  }
+  if (title === STANDING_TRUNK_ROTATION) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Standing Trunk Rotation.png');
+  }
+  if (title === SUPINE_PELVIC_TILT) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Supine_Pelvic_Tilt.png');
+  }
+  if (title === TRUNK_EXTENSION) {
+    return require('../assets/thumbnails/OR_Squats.png');
+    // Need to Add Thumbnail
+    //return require('../assets/thumbnails/Trunk_Extension.png');
   }
 }

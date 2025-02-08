@@ -1,20 +1,21 @@
-import { StyleSheet, View, Text, Pressable } from "react-native";
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
-import { faUserDoctor } from '@fortawesome/free-solid-svg-icons/faUserDoctor'
+import { StyleSheet, View, Text, Pressable, Image } from "react-native";
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faUserDoctor } from '@fortawesome/free-solid-svg-icons/faUserDoctor';
 import { Link } from 'expo-router';
 
-import CardComponent from '@/components/CardComponent'
+import { getThumbnail } from '@/services/assetService';
+import CardComponent from '@/components/CardComponent';
 import {
   paletteTealDarkContrast,
   paletteTealDark,
   paletteBlack,
   paletteTealLight
-} from '@/constants/Colors'
+} from '@/constants/Colors';
 
 export function Section({ title, subheading, icon, cards, category }) {
   return (
     <View style={styles.section}>
-      <View style={{ flexDirection: "row" }}>
+      <View style={{ flexDirection: "row", paddingBottom: 10 }}>
         <View style={styles.icon}>
           <FontAwesomeIcon icon={icon} size={42} style={{color: paletteTealDarkContrast }} />
         </View>
@@ -28,6 +29,11 @@ export function Section({ title, subheading, icon, cards, category }) {
         {cards.map((card, index) =>
           <View style={{ width: "50%", alignItems: "center" }} key={index}>
             <CardComponent key={index} data={{...card, category}}>
+              <Image
+                style={styles.image}
+                resizeMode='stretch'
+                source={getThumbnail(card.title)}
+              />
             </CardComponent>
             <View style={{ flex: 1, width: 158 }}>
               <Link href={{ pathname: "/video", params: {...card, category} }} asChild>
@@ -70,5 +76,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     color: paletteBlack
+  },
+  image: {
+    width: '100%',
+    height: '100%'
   }
-})
+});

@@ -4,7 +4,7 @@
     "slug": "surgistretch",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/SurgiStretchLogoLargeBlack.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -13,7 +13,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/SurgiStretchLogoLargeBlack.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.anonymous.surgistretch"
@@ -28,7 +28,7 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/react-logo.png",
+          "image": "./assets/images/SurgiStretchLogoLargeBlack.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#58ACAF"
